@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+.env
+server/data/db.json
+server/data/*.tmp
+*.log
+.DS_Store
+server/evals/last-run.json
+*.tsbuildinfo
+
+# Local env files and editor settings (.env.example stays tracked)
+.env.*
+!.env.example
+.vscode/
+.idea/

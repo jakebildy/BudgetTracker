@@ -1,0 +1,81 @@
+.card {
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid var(--color-brand-soft-border);
+  border-radius: 12px;
+  background: var(--color-brand-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-brand-hover);
+}
+
+.summary {
+  margin: 0;
+  font-weight: 600;
+}
+
+.operations {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.approve,
+.reject {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.approve {
+  border: 0;
+  background: var(--color-brand);
+  color: #ffffff;
+}
+
+.reject {
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.approve:disabled,
+.reject:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.outcome {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.error {
+  margin: 0;
+  color: var(--color-danger);
+}
+
+.more {
+  margin: 0;
+  color: var(--color-text-muted);
+}

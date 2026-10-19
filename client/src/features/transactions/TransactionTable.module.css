@@ -1,0 +1,104 @@
+.scroller {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 580px;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.table th {
+  padding: 14px 12px 10px;
+  text-align: left;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table th:first-child,
+.table td:first-child {
+  padding-left: 20px;
+}
+
+.table tbody tr {
+  border-top: 1px solid var(--color-divider);
+}
+
+.table td {
+  padding: 12px;
+}
+
+.editing {
+  background: var(--color-surface-selected);
+}
+
+.date {
+  white-space: nowrap;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.description {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.descriptionText {
+  display: block;
+  font-weight: 500;
+}
+
+.source {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.amountHeader {
+  text-align: right !important;
+}
+
+.income,
+.expense {
+  text-align: right;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.income {
+  color: var(--color-income);
+}
+
+.expense {
+  color: var(--color-text);
+}
+
+.actions {
+  padding: 6px 16px 6px 8px !important;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.iconButton {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconButton:hover {
+  background: var(--color-surface-muted);
+}

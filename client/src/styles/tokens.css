@@ -1,0 +1,44 @@
+/* Plum design tokens. Category colors live in lib/categoryColors.ts because they are chosen per row. */
+:root {
+  --font-sans: "Geist Sans", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  --color-page: #f8f7fb;
+  --color-surface: #ffffff;
+  /* Ask AI bubbles: the brand purple for your messages, iMessage grey for answers. */
+  --color-bubble-sent: #6941c6;
+  --color-bubble-received: #e9e9eb;
+  --color-surface-muted: #f0eef5;
+  --color-surface-selected: #f8f5fe;
+  --color-tooltip: #2c2440;
+  --color-tooltip-muted: #a39db5;
+
+  --color-text: #1a1528;
+  --color-text-muted: #5f5873;
+  --color-text-placeholder: #8a84a0;
+
+  --color-border: #e6e3ee;
+  --color-border-strong: #ccc7da;
+  --color-divider: #f0eef5;
+
+  --color-brand: #6941c6;
+  --color-brand-hover: #4e2da0;
+  --color-brand-soft: #f2eefc;
+  --color-brand-soft-border: #d9cdf6;
+
+  --color-income: #6941c6;
+  --color-expense: #b54708;
+  --color-expense-mark: #f79009;
+  --color-net-positive-text: #0f6a4e;
+  --color-danger: #b42318;
+  --color-success-bg: #ddf5e6;
+  --color-success-text: #1e6b3e;
+  --color-toast: #1a1528;
+
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-raised: 0 1px 2px rgba(26, 21, 40, 0.12);
+}

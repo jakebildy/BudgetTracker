@@ -1,0 +1,240 @@
+/* Stays in view while the page scrolls, and is exactly one screen tall so the input is always visible. */
+.panel {
+  flex: 1 1 360px;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: 100vh;
+  height: 100dvh;
+  border-left: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 22px 20px 14px;
+  border-bottom: 1px solid var(--color-divider);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--color-brand-soft);
+  color: var(--color-brand-hover);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.subheading {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.log {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Message bubbles in the style of iMessage. The tail is two pseudo-elements: a curve in the
+   bubble's color, and a cut-out in the background color that shapes it. */
+.bubble {
+  position: relative;
+  z-index: 0;
+  max-width: 78%;
+  margin: 0;
+  padding: 8px 14px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.4;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.bubble::before,
+.bubble::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  height: 20px;
+}
+
+.sent {
+  align-self: flex-end;
+  margin-right: 6px;
+  background: var(--color-bubble-sent);
+  color: #ffffff;
+}
+
+.sent::before {
+  right: -7px;
+  width: 20px;
+  background: var(--color-bubble-sent);
+  border-bottom-left-radius: 16px 14px;
+}
+
+.sent::after {
+  right: -10px;
+  width: 10px;
+  background: var(--color-surface);
+  border-bottom-left-radius: 10px;
+}
+
+.received {
+  align-self: flex-start;
+  margin-left: 6px;
+  background: var(--color-bubble-received);
+  color: var(--color-text);
+}
+
+.received::before {
+  left: -7px;
+  width: 20px;
+  background: var(--color-bubble-received);
+  border-bottom-right-radius: 16px 14px;
+}
+
+.received::after {
+  left: -10px;
+  width: 10px;
+  background: var(--color-surface);
+  border-bottom-right-radius: 10px;
+}
+
+/* An answer: its bubble, then any charts and proposal cards under it. */
+.answer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.answer > .bubble {
+  align-self: flex-start;
+}
+
+.status {
+  margin: 0 0 0 6px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+
+
+
+
+
+.error {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--color-danger);
+}
+
+.composer {
+  padding: 12px 20px 20px;
+  border-top: 1px solid var(--color-divider);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.chip:disabled {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+.form {
+  padding: 3px 3px 3px 6px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form:focus-within {
+  border-color: var(--color-bubble-sent);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 34px;
+  padding: 0 10px;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 15px;
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+.send {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-bubble-sent);
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
